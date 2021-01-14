@@ -1,0 +1,359 @@
+$('#up').fadeOut(700)
+$(document).ready(function(){
+    var Menu  = false
+
+    $('#bell').on('click', function(){
+        $('.bell').toggleClass('active')
+        $('.bell-bg').toggleClass('active')
+    })
+
+    $('#close-bell').on('click', function(){
+        $('.bell').toggleClass('active')
+        $('.bell-bg').toggleClass('active')
+    })
+
+    $('.prices-content-block-prices__form').on('click', function(){
+        $('.bell').toggleClass('active')
+        $('.bell-bg').toggleClass('active')
+    })
+
+    function menu(){
+        $('.menu').toggleClass('active')
+        $('.prev').toggleClass('active')
+        $('.prices').toggleClass('active')
+        $('.progress').toggleClass('active')
+        $('.benefits').toggleClass('active')
+        $('.elimination').toggleClass('active')
+        $('.questions').toggleClass('active')
+        $('.cooperation').toggleClass('active')
+        $('.gratitude').toggleClass('active')
+        $('.m-result').toggleClass('active')
+        $('.m-footer').toggleClass('active')
+    }
+    function send(){
+        $('.prev').toggleClass('active')
+        $('.prices').toggleClass('active')
+        $('.progress').toggleClass('active')
+        $('.benefits').toggleClass('active')
+        $('.elimination').toggleClass('active')
+        $('.questions').toggleClass('active')
+        $('.cooperation').toggleClass('active')
+        $('.gratitude').toggleClass('active')
+        $('.m-result').toggleClass('active')
+        $('.m-footer').toggleClass('active')
+    }
+
+    $('#menu').on('click', function(){
+        console.log('fjaof')
+        Menu = true
+        menu()
+        $('.menu-open').toggleClass('active')
+        $('.menu-close').toggleClass('active')
+    })
+
+    $('#close').on('click', function(){
+        Menu = false
+        menu()
+        $('.menu-open').toggleClass('active')
+        $('.menu-close').toggleClass('active')
+    })
+    
+    $('.send__item').on('click', function(){
+        if(Menu == false){
+            send()
+            $('.menu-open').toggleClass('active')
+            $('.bell-close').toggleClass('active')
+            $('.mobile-bell').toggleClass('active') 
+            $('.container-link').toggleClass('active')
+        }
+        if(Menu == true){
+            $('.menu').toggleClass('active')
+            $('.menu-close').toggleClass('active')
+            $('.bell-close').toggleClass('active')
+            $('.mobile-bell').toggleClass('active') 
+            $('.container-link').toggleClass('active')
+            Menu = false
+        }
+    })
+
+    $('.prices-main-block').on('click', function(){
+        if(Menu == false){
+            send()
+            $('.menu-open').toggleClass('active')
+            $('.bell-close').toggleClass('active')
+            $('.mobile-bell').toggleClass('active') 
+            $('.container-link').toggleClass('active')
+        }
+        if(Menu == true){
+            $('.menu').toggleClass('active')
+            $('.menu-close').toggleClass('active')
+            $('.bell-close').toggleClass('active')
+            $('.mobile-bell').toggleClass('active') 
+            $('.container-link').toggleClass('active')
+            Menu = false
+        }
+    })
+
+    $('#close-bell-mob').on('click', function(){
+        send()
+        $('.menu-open').toggleClass('active')
+        $('.bell-close').toggleClass('active')
+        $('.mobile-bell').toggleClass('active') 
+        $('.container-link').toggleClass('active')
+    })
+
+    $('#dispatch').on('click', function(){
+        $('.call-back').addClass('active')
+        $('.mobile-bell').toggleClass('active')
+        $('.bell-close').removeClass('active')
+        setTimeout(
+            () => {
+                send()
+                $('.call-back').removeClass('active')
+                $('.menu-open').toggleClass('active')
+                $('.container-link').toggleClass('active')
+            },
+            3000
+          );
+    })
+
+    $('.container-link__item').on('click', function (event) {
+        $(".container-link__whatsapp").toggleClass("active");
+        $(".container-link__telegram").toggleClass("active");
+        $(".container-link__call").toggleClass("active");
+        $(this).toggleClass("active");
+    })
+
+    $(window).scroll(function(){
+		if($(window).scrollTop()>120){
+			$('#up').fadeIn(900)
+		}else{
+			$('#up').fadeOut(700)  
+		}
+    });
+
+    $('.prices-content').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        adaptiveHeight: true,
+        responsive: [
+            {
+              breakpoint: 1290,
+              settings: {
+                centerMode: true,
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              }
+            },
+          ]
+    });
+
+
+    $('.cooperation-container').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        adaptiveHeight: true,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+    });
+
+    $('.gratitude-container').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        adaptiveHeight: true,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+    });
+
+    $('.answer-close').on('click', function (event) {
+        $('.answer').toggleClass('active');
+        $('.bell-bg').toggleClass('active');
+    })
+
+    $('#1').on('click', function (event) {
+        let answerTitle = 'НАШЛИ ЦЕНЫ НИЖЕ?';
+        let answerContent = 'У нас работают профессиональные юристы, специализирующиеся на ликвидации и регистрации предприятий. За более чем 15 лет на рынке мы накопили огромный опыт и решили множество дел разной сложности. Мы строго соблюдаем законы и сроки и гарантируем 100% результат. Низкие же цены зачастую предлагают непрофильные юристы, которые плохо разбираются в вопросе. Не обладая нужными знаниями, они не могут завершить процесс ликвидации, нарушают сроки, а иногда и вовсе пропадают. Чтобы не платить дважды, выбирайте опытных специалистов!';
+        $('.answer').toggleClass('active');
+        $('.bell-bg').toggleClass('active');
+        $('.answer-container-title').html(answerTitle);
+        $('.answer-container-content').html(answerContent)
+    })
+    $('#2').on('click', function (event) {
+        let answerTitle = 'НУЖЕН ЛИ ДИРЕКТОР И ВСЕ УЧРЕДИТЕЛИ ДЛЯ ЛИКВИДАЦИИ ФИРМЫ?';
+        let answerContent = 'Как правило, для начала процесса ликвидации требуется присутствие директора или одного из учредителей. Все остальные участники могут только подписать протокол.';
+        $('.answer').toggleClass('active');
+        $('.bell-bg').toggleClass('active');
+        $('.answer-container-title').html(answerTitle);
+        $('.answer-container-content').html(answerContent)
+    })
+    $('#3').on('click', function (event) {
+        let answerTitle = 'ЧТО БУДEТ С МОЕЙ ФИРМОЙ ПОСЛЕ ЛИКВИДАЦИИ?';
+        let answerContent = 'Обычно требуются:<br> - устав,<br> - свидетельство о регистрации,<br> - свидетельство о постановке на учет,<br> - копия паспорта руководителя.<br> В оригиналах документы понадобятся для нотариуса при заверке.';
+        $('.answer').toggleClass('active');
+        $('.bell-bg').toggleClass('active');
+        $('.answer-container-title').html(answerTitle);
+        $('.answer-container-content').html(answerContent)
+    })
+    $('#4').on('click', function (event) {
+        let answerTitle = 'КАКИЕ ДОКУМЕНТЫ НУЖНЫ ДЛЯ ЛИКВИДАЦИИ?';
+        let answerContent = 'Фирма прекратит деятельность, исключится из государственного реестра. Следовательно по этой компании уже не будет запросов госорганов, она не должна сдавать отчетность.';
+        $('.answer').toggleClass('active');
+        $('.bell-bg').toggleClass('active');
+        $('.answer-container-title').html(answerTitle);
+        $('.answer-container-content').html(answerContent)
+    })
+    $('#5').on('click', function (event) {
+        let answerTitle = 'КОГДА НУЖНО ЗАКРЫТЬ РАСЧEТНЫЙ СЧЕТ?';
+        let answerContent = 'Счет можно закрыть в любой момент до окончания ликвидации.';
+        $('.answer').toggleClass('active');
+        $('.bell-bg').toggleClass('active');
+        $('.answer-container-title').html(answerTitle);
+        $('.answer-container-content').html(answerContent)
+    })
+    $('#6').on('click', function (event) {
+        let answerTitle = 'ЗАНИМАЕТЕСЬ ЛИ ВЫ ФИРМАМИ В ДРУГИХ РЕГИОНАХ?';
+        let answerContent = 'Порядок регистрации един по России, и у нас есть обширная партнерская сеть, через которую мы можем надежно подавать и получать документы. Обязанность подготовки и заверки документов остается на нас.';
+        $('.answer').toggleClass('active');
+        $('.bell-bg').toggleClass('active');
+        $('.answer-container-title').html(answerTitle);
+        $('.answer-container-content').html(answerContent)
+    })
+    $('#7').on('click', function (event) {
+        let answerTitle = 'С ЧЕГО НАЧАТЬ ПРОЦЕДУРУ ЛИКВИДАЦИИ?';
+        let answerContent = 'С консультации, по телефону или лично. В этом случае специалист подробно проконсультирует вас о предпочтительном способе и сроках ликвидации.';
+        $('.answer').toggleClass('active');
+        $('.bell-bg').toggleClass('active');
+        $('.answer-container-title').html(answerTitle);
+        $('.answer-container-content').html(answerContent)
+    })
+    $('#8').on('click', function (event) {
+        let answerTitle = 'МОГУТ ЛИ УЧРЕДИТЕЛИ ОТВЕЧАТЬ ПО ДОЛГАМ ФИРМЫ В СЛУЧАЕ ЕЕ ЛИКВИДАЦИИ?';
+        let answerContent = 'Учредители отвечают только в пределах своих вкладов в уставный капитал, кроме случаев субсидиарной ответственности при банкротстве.';
+        $('.answer').toggleClass('active');
+        $('.bell-bg').toggleClass('active');
+        $('.answer-container-title').html(answerTitle);
+        $('.answer-container-content').html(answerContent)
+    })
+    $('#9').on('click', function (event) {
+        let answerTitle = 'ОДИН ИЗ СОУЧРЕДИТЕЛЕЙ НЕ ХОЧЕТ ЛИКВИДИРОВАТЬ ФИРМУ, А ОСТАЛЬНЫЕ ХОТЯТ. ЧТО ДЕЛАТЬ В ЭТОМ СЛУЧАЕ?';
+        let answerContent = 'Для ликвидации необходимо 100% голосов всех учредителей, иначе ее могут отменить в судебном порядке. Если один не согласен, то можно оставшимся выйти из этого общества или продать свои акции.';
+        $('.answer').toggleClass('active');
+        $('.bell-bg').toggleClass('active');
+        $('.answer-container-title').html(answerTitle);
+        $('.answer-container-content').html(answerContent)
+    })
+
+
+    $('#click').on('click', function(e){
+        $('html,body').stop().animate({ scrollTop: $('header').offset().top }, 1000);
+        e.preventDefault();
+    });
+    $('#prices').on('click', function(e){
+        $('html,body').stop().animate({ scrollTop: $('.prices').offset().top }, 1000);
+        e.preventDefault();
+    });
+    $('#elimination').on('click', function(e){
+        $('html,body').stop().animate({ scrollTop: $('.elimination').offset().top }, 1000);
+        e.preventDefault();
+    });
+    $('#questions').on('click', function(e){
+        $('html,body').stop().animate({ scrollTop: $('.questions').offset().top }, 1000);
+        e.preventDefault();
+    });
+    $('#result').on('click', function(e){
+        $('html,body').stop().animate({ scrollTop: $('.result').offset().top }, 1000);
+        e.preventDefault();
+    });
+    $('#contact').on('click', function(e){
+        $('html,body').stop().animate({ scrollTop: $('.footer').offset().top }, 1000);
+        e.preventDefault();
+    });
+    $('#mobile-prices').on('click', function(e){
+        menu()
+        $('.menu-open').toggleClass('active')
+        $('.menu-close').toggleClass('active')
+        $('html,body').stop().animate({ scrollTop: $('#prices-link').offset().top }, 1000);
+        e.preventDefault();
+    });
+    $('#mobile-elimination').on('click', function(e){
+        menu()
+        $('.menu-open').toggleClass('active')
+        $('.menu-close').toggleClass('active')
+        $('html,body').stop().animate({ scrollTop: $('#elimination-link').offset().top }, 1000);
+        e.preventDefault();
+    });
+    $('#mobile-questions').on('click', function(e){
+        menu()
+        $('.menu-open').toggleClass('active')
+        $('.menu-close').toggleClass('active')
+        $('html,body').stop().animate({ scrollTop: $('#questions-link').offset().top }, 1000);
+        e.preventDefault();
+    });
+    $('#mobile-result').on('click', function(e){
+        menu()
+        $('.menu-open').toggleClass('active')
+        $('.menu-close').toggleClass('active')
+        $('html,body').stop().animate({ scrollTop: $('#result-link').offset().top }, 1000);
+        e.preventDefault();
+    });
+    $('#mobile-footer').on('click', function(e){
+        menu()
+        $('.menu-open').toggleClass('active')
+        $('.menu-close').toggleClass('active')
+        $('html,body').stop().animate({ scrollTop: $('#footer-link').offset().top }, 1000);
+        e.preventDefault();
+    });
+
+
+})
