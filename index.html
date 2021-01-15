@@ -67,19 +67,23 @@
             </div>
         </div>
         <div class="bell-bg"></div>
-        <form method="POST" action="http://localhost:3001/index" class="bell">
+
+
+        <form method="POST" action="send.php" class="bell">
             <button id="close-bell" class="bell__button">
                 <img src="img/bell.svg" alt="">
             </button>
             <div class="bell-container">
                 <div class="bell-container__title">Заказать<br>звонок</div>
                 <div class="bell-container-form">
-                    <input class="bell-container-form__input" name="name" type="text" required maxlength="22" placeholder="Имя">
-                    <input class="bell-container-form__input" name="telephone" type="text" required maxlength="12" placeholder="Телефон">
+                    <input type="text" class="bell-container-form__input" name="user_name" placeholder='Имя' name="user_name" required="">
+                    <input type="text" class="bell-container-form__input" name="user_email" placeholder='Телефон'>
                 </div>
-                <button class="bell-container__send">ОТПРАВИТЬ</button>
+                <button id="submit_bell" type="submit" class="bell-container__send">ОТПРАВИТЬ</button>
             </div>
         </form>
+
+
         <div class="prev">
             <header>
                 <a class="header__logo" href="index.html">
@@ -98,8 +102,8 @@
                     </menu>
                 </div>
                 <div class="header-contacts">
-                    <div class="header-contacts__item">(8172) 50-12-86</div>
-                    <div class="header-contacts__item">8 800 250 71 37</div>
+                    <div class="header-contacts__item"><a href="tel:88002507131" class="header-contacts__item">8 (800) 250-71-31</a></div>
+                    <div class="header-contacts__item"><a href="tel:88172591286" class="header-contacts__item">8 (8172) 50-12-86</a></div>
                     <button id="bell" class="header-contacts__bell">Заказать звонок</button>
                 </div>
             </header>
@@ -617,11 +621,15 @@
                         <div class="footer-container-content-block__details">2016-2020 ООО “Юрист-Партнер”<br><a class="header-link" href="/doc/requisites.jpg">Реквизиты</a></div>
                         <div class="footer-container-content-block-map">
                             <img class="footer-container-content-block__icon" src="img/address.svg" alt="">
-                            <div class="footer-container-content-block-map__address">Главный офис:<br>г. Вологда, ул. Чехова, 3А</div>
+                            <div class="footer-container-content-block-map__address">
+                                Главный офис:<br>
+                                <a href="https://goo.gl/maps/bHrPFnwP5wcLJgHX8" class="footer-container-content-block-map__address" target="_blank">г. Вологда, ул. Чехова, 3А</a></div>
                         </div>
                         <div class="footer-container-content-block-telephone">
                             <img class="footer-container-content-block__icon" src="img/telephone.mob.svg" alt="">
-                            <div class="footer-container-content-block-telephone__item">8 800 250 71 37<br>(8172) 50-12-86</div>
+                            <div class="footer-container-content-block-telephone__item">
+                                <a href="tel:88172591286" class="footer-container-content-block-telephone__item">8 (8172) 50-12-86</a><br>
+                                <a href="tel:88172591286" class="footer-container-content-block-telephone__item">8 (8172) 50-12-86</a></div>
                         </div>
                     </div>
                 </div>
@@ -668,13 +676,13 @@
             </div>
         </div>
         <div class="mobile-bell">
-            <form method="POST" action="http://localhost:3001/index" class="mobile-bell-container">
+            <form method="POST" action="send.php" class="mobile-bell-container">
                 <div class="mobile-bell-container__title">Заказать<br>звонок</div>
                 <div class="mobile-bell-container-form">
-                    <input class="mobile-bell-container-form__input" type="text" name="name" placeholder="Имя">
-                    <input class="mobile-bell-container-form__input" type="text" name="telephone" placeholder="Телефон">
+                    <input class="mobile-bell-container-form__input" type="text" name="user_name" placeholder="Имя">
+                    <input class="mobile-bell-container-form__input" type="text" name="user_email" placeholder="Телефон">
                 </div>
-                <div id="dispatch" class="mobile-bell-container__send">ОТПРАВИТЬ</div>
+                <button type="submit" id="dispatch" class="mobile-bell-container__send">ОТПРАВИТЬ</button>
             </form>
         </div>
         <div class="call-back">
@@ -730,36 +738,36 @@
                 <div class="prices-main-block">
                     <div class="prices-main-block-content__title">ДОБРОВОЛЬНАЯ<br>ЛИКВИДАЦИЯ</div>
                     <div class="prices-main-block-info">
-                        <div class="prices-main-block-info__time">от 5 дней</div>
-                        <div class="prices-main-block-info__cost">от 40 000₽</div>
+                        <div class="prices-main-block-info__time">от 3 месяцев</div>
+                        <div class="prices-main-block-info__cost">от 25 000₽</div>
                     </div>
                 </div>
                 <div class="prices-main-block">
                     <div class="prices-main-block-content__title">ДОБРОВОЛЬНАЯ<br>ЛИКВИДАЦИЯ<br>С ГАРАНТИЕЙ<br>ОТСУТСВИЯ ВПН</div>
                     <div class="prices-main-block-info">
-                        <div class="prices-main-block-info__time">от 5 дней</div>
-                        <div class="prices-main-block-info__cost">от 40 000₽</div>
+                        <div class="prices-main-block-info__time">от 4-5 месяцев</div>
+                        <div class="prices-main-block-info__cost">от 200 000₽</div>
                     </div>
                 </div>
                 <div class="prices-main-block">
                     <div class="prices-main-block-content__title">СОЗДАНИЕ<br>ОБЩЕСТВА</div>
                     <div class="prices-main-block-info">
-                        <div class="prices-main-block-info__time">от 5 дней</div>
-                        <div class="prices-main-block-info__cost">от 40 000₽</div>
+                        <div class="prices-main-block-info__time">от 3 дней</div>
+                        <div class="prices-main-block-info__cost">от 1500₽</div>
                     </div>
                 </div>
                 <div class="prices-main-block">
                     <div class="prices-main-block-content__title">ИЗМЕНЕНИЯ В<br>УЧРЕДИТЕЛЬНЫЕ<br>ДОКУМЕНТЫ</div>
                     <div class="prices-main-block-info">
                         <div class="prices-main-block-info__time">от 5 дней</div>
-                        <div class="prices-main-block-info__cost">от 40 000₽</div>
+                        <div class="prices-main-block-info__cost">от 1500₽</div>
                     </div>
                 </div>
                 <div class="prices-main-block">
                     <div class="prices-main-block-content__title">УПРАВЛЯЕМОЕ<br>БАНКРОТСТВО</div>
                     <div class="prices-main-block-info">
-                        <div class="prices-main-block-info__time">от 5 дней</div>
-                        <div class="prices-main-block-info__cost">от 40 000₽</div>
+                        <div class="prices-main-block-info__time">от 6 месяцев</div>
+                        <div class="prices-main-block-info__cost">от 120 000₽</div>
                     </div>
                 </div>
                 <div class="prices-main-block">
@@ -772,15 +780,14 @@
                 <div class="prices-main-block">
                     <div class="prices-main-block-content__title">ЮРИДИЧЕСКИЙ<br>АДРЕС</div>
                     <div class="prices-main-block-info">
-                        <div class="prices-main-block-info__time">от 5 дней</div>
-                        <div class="prices-main-block-info__cost">от 40 000₽</div>
+                        <div class="prices-main-block-info__time">от 1 дня</div>
+                        <div class="prices-main-block-info__cost">от 15 000₽</div>
                     </div>
                 </div>
                 <div class="prices-main-block">
                     <div class="prices-main-block-content__title">НАЛОГОВЫЕ<br>СПОРЫ</div>
                     <div class="prices-main-block-info">
-                        <div class="prices-main-block-info__time">от 5 дней</div>
-                        <div class="prices-main-block-info__cost">от 40 000₽</div>
+                        <div class="prices-main-block-info__time">По согласованию</div>
                     </div>
                 </div>
             </div>
@@ -894,6 +901,23 @@
             </div>
             <div class="questions-container">
                 <button class="questions-container__button">Выберите вопрос, который Вас интересует...</button>
+            </div>
+            <div class="questions-container-main">
+                <div class="questions-container-search">
+                    <input type="text" class="questions-container-search__input" placeholder="Поиск">
+                    <img class="close-search" src="img/close-search.svg" alt="">
+                </div>
+                <div class="questions-container-questions">
+                    <div id="mobile-questions-1" class="questions-container-questions__block">Нашли цены ниже?</div>
+                    <div id="mobile-questions-1" class="questions-container-questions__block">Нужен ли директор и все учредители для ликвидации фирмы?</div>
+                    <div id="mobile-questions-1" class="questions-container-questions__block">Какие документы нужны для ликвидации?</div>
+                    <div id="mobile-questions-1" class="questions-container-questions__block">Что будет с моей фирмой после ликвидации?</div>
+                    <div id="mobile-questions-1" class="questions-container-questions__block">Когда нужно закрыть расчетный счет?</div>
+                    <div id="mobile-questions-1" class="questions-container-questions__block">Могут ли учредители отвечать по долгам фирмы в случае ее ликвидации?</div>
+                    <div id="mobile-questions-1" class="questions-container-questions__block">Занимаетесь ли вы фирмами в других регионах?</div>
+                    <div id="mobile-questions-1" class="questions-container-questions__block">С чего начать процедуру ликвидации?</div>
+                    <div id="mobile-questions-1" class="questions-container-questions__block">Один из соучредителей не хочет ликвидировать фирму, а остальные хотят. Что делать в этом случае?</div>
+                </div>
             </div>
         </div>
         <div class="cooperation">
@@ -1065,14 +1089,14 @@
                     <img src="img/map.mob.svg" alt="">
                     <div class="m-footer-container-map__info">
                         Главный офис:<br>
-                        г. Вологда, ул. Чехова, 3А
+                        <a href="https://goo.gl/maps/bHrPFnwP5wcLJgHX8" class="m-footer-container-telephone__info" target="_blank">г. Вологда, ул. Чехова, 3А</a>
                     </div>
                 </div>
                 <div class="m-footer-container-telephone">
                     <img src="img/telephone.mob.svg" alt="">
                     <div class="m-footer-container-telephone__info">
-                        8 800 250 71 37<br>
-                        (8172) 50-12-86
+                        <a href="tel:88002507131" class="m-footer-container-telephone__info">8 800 250 71 37</a><br>
+                        <a href="tel:88172591286" class="m-footer-container-telephone__info">8 (8172) 50-12-86</a>
                     </div>
                 </div>
                 <div class="m-footer-container-logo">
