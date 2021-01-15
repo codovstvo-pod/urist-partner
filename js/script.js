@@ -30,6 +30,23 @@ $(document).ready(function(){
         $('.m-result').toggleClass('active')
         $('.m-footer').toggleClass('active')
     }
+
+    function questions(){
+        $('.container-link').toggleClass('active')
+        $('header').addClass('active')
+        $('.prev').toggleClass('active')
+        $('.prices').toggleClass('active')
+        $('.progress').toggleClass('active')
+        $('.benefits').toggleClass('active')
+        $('.elimination').toggleClass('active')
+        $('.questions-title').toggleClass('active')
+        $('.questions-container').toggleClass('active')
+        $('.cooperation').toggleClass('active')
+        $('.gratitude').toggleClass('active')
+        $('.m-result').toggleClass('active')
+        $('.m-footer').toggleClass('active')
+    }
+
     function send(){
         $('.prev').toggleClass('active')
         $('.prices').toggleClass('active')
@@ -124,6 +141,17 @@ $(document).ready(function(){
         $(this).toggleClass("active");
     })
 
+    $('.questions-container__button').on('click', function(){
+        questions()
+        $('.questions-container-main').addClass('active')
+    })
+
+    $('.close-search').on('click', function(){
+        questions()
+        $('header').removeClass('active')
+        $('.questions-container-main').removeClass('active')
+    })
+
     $(window).scroll(function(){
 		if($(window).scrollTop()>120){
 			$('#up').fadeIn(900)
@@ -131,6 +159,44 @@ $(document).ready(function(){
 			$('#up').fadeOut(700)  
 		}
     });
+
+
+    $("#submit_bell").submit(function() {
+        var form_data = $(this).serialize();
+        $.ajax({
+            type: "POST",
+            url: "send.php",
+            data: form_data,
+            success: function() {
+                // $(".successfully-wrapper").addClass("active");
+                $(".bell").removeClass("active");
+                setTimeout (function() {
+                // $(".successfully-wrapper").removeClass("active");
+                // $('body').css('overflow-y', 'auto');
+                }, 2000);
+            }
+        });
+        event.preventDefault();
+        });
+
+        $("#dispatch").submit(function() {
+            var form_data = $(this).serialize();
+            $.ajax({
+                type: "POST",
+                url: "send.php",
+                data: form_data,
+                success: function() {
+                    // $(".successfully-wrapper").addClass("active");
+                    $(".bell").removeClass("active");
+                    setTimeout (function() {
+                    // $(".successfully-wrapper").removeClass("active");
+                    // $('body').css('overflow-y', 'auto');
+                    }, 2000);
+                }
+            });
+            event.preventDefault();
+            });   
+                                                        
 
     $('.prices-content').slick({
         infinite: true,
