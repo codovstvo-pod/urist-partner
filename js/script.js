@@ -164,50 +164,49 @@ $(document).ready(function () {
     $(".bell").submit(function () {
         var form_data = $(this).serialize();
         $.ajax({
-            type: "POST",
-            url: "https://xn----8sbpj1akeecdle1m.xn--p1ai/send",
-            crossDomain: true,
-            headers: {
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Headers": "*",
-                "Access-Control-Allow-Methods": "POST,GET,PUT,DELETE,OPTIONS"
-            },
-            data: form_data,
-            success: function () {
-                // $(".successfully-wrapper").addClass("active");
-                $(".bell").removeClass("active");
-                setTimeout(function () {
-                    // $(".successfully-wrapper").removeClass("active");
-                    // $('body').css('overflow-y', 'auto');
-                }, 2000);
-            }
+        type: "POST",
+        url: `https://xn----8sbpj1akeecdle1m.xn--p1ai/send?${form_data}`,
+        crossDomain: true,
+        headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Methods": "POST,GET,PUT,DELETE,OPTIONS"
+        },
+        success: function () {
+        // $(".successfully-wrapper").addClass("active");
+        $(".bell").removeClass("active");
+        setTimeout(function () {
+        // $(".successfully-wrapper").removeClass("active");
+        // $('body').css('overflow-y', 'auto');
+        }, 2000);
+        }
         });
         event.preventDefault();
-    });
-
-    $(".mobile-bell-container").submit(function () {
+        });
+        
+        $(".mobile-bell-container").submit(function () {
         var form_data = $(this).serialize();
         $.ajax({
-            type: "POST",
-            url: "https://xn----8sbpj1akeecdle1m.xn--p1ai/send",
-            crossDomain: true,
-            headers: {
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Headers": "*",
-                "Access-Control-Allow-Methods": "POST,GET,PUT,DELETE,OPTIONS"
-            },
-            data: form_data,
-            success: function () {
-                // $(".successfully-wrapper").addClass("active");
-                $(".bell").removeClass("active");
-                setTimeout(function () {
-                    // $(".successfully-wrapper").removeClass("active");
-                    // $('body').css('overflow-y', 'auto');
-                }, 2000);
-            }
+        type: "POST",
+        url: `https://xn----8sbpj1akeecdle1m.xn--p1ai/send?${form_data}`,
+        crossDomain: true,
+        headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Methods": "POST,GET,PUT,DELETE,OPTIONS"
+        },
+        success: function () {
+        // $(".successfully-wrapper").addClass("active");
+        $(".bell").removeClass("active");
+        setTimeout(function () {
+        // $(".successfully-wrapper").removeClass("active");
+        // $('body').css('overflow-y', 'auto');
+        }, 2000);
+        }
         });
         event.preventDefault();
-    });
+        });
+        
 
 
     $('.prices-content').slick({
@@ -218,11 +217,20 @@ $(document).ready(function () {
         responsive: [{
             breakpoint: 1290,
             settings: {
-                centerMode: true,
+                // centerMode: true,
                 slidesToShow: 2,
                 slidesToScroll: 2,
+            }   
+        },
+        {
+            breakpoint: 1190,
+            settings: {
+                // centerMode: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
             }
-        }, ]
+        }
+        ]
     });
 
 
@@ -232,10 +240,10 @@ $(document).ready(function () {
         slidesToScroll: 3,
         adaptiveHeight: true,
         responsive: [{
-                breakpoint: 1024,
+                breakpoint: 1290,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                 }
             },
             {
@@ -264,10 +272,10 @@ $(document).ready(function () {
         slidesToScroll: 3,
         adaptiveHeight: true,
         responsive: [{
-                breakpoint: 1024,
+                breakpoint: 1290,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                 }
             },
             {
@@ -313,7 +321,7 @@ $(document).ready(function () {
     })
     $('#3').on('click', function (event) {
         let answerTitle = 'ЧТО БУДEТ С МОЕЙ ФИРМОЙ ПОСЛЕ ЛИКВИДАЦИИ?';
-        let answerContent = 'Обычно требуются:<br> - устав,<br> - свидетельство о регистрации,<br> - свидетельство о постановке на учет,<br> - копия паспорта руководителя.<br> В оригиналах документы понадобятся для нотариуса при заверке.';
+        let answerContent = 'Фирма прекратит деятельность, исключится из государственного реестра. Следовательно по этой компании уже не будет запросов госорганов, она не должна сдавать отчетность.';
         $('.answer').toggleClass('active');
         $('.bell-bg').toggleClass('active');
         $('.answer-container-title').html(answerTitle);
@@ -321,7 +329,7 @@ $(document).ready(function () {
     })
     $('#4').on('click', function (event) {
         let answerTitle = 'КАКИЕ ДОКУМЕНТЫ НУЖНЫ ДЛЯ ЛИКВИДАЦИИ?';
-        let answerContent = 'Фирма прекратит деятельность, исключится из государственного реестра. Следовательно по этой компании уже не будет запросов госорганов, она не должна сдавать отчетность.';
+        let answerContent = 'Обычно требуются:<br> - устав,<br> - свидетельство о регистрации,<br> - свидетельство о постановке на учет,<br> - копия паспорта руководителя.<br> В оригиналах документы понадобятся для нотариуса при заверке.';
         $('.answer').toggleClass('active');
         $('.bell-bg').toggleClass('active');
         $('.answer-container-title').html(answerTitle);
@@ -366,6 +374,92 @@ $(document).ready(function () {
         $('.bell-bg').toggleClass('active');
         $('.answer-container-title').html(answerTitle);
         $('.answer-container-content').html(answerContent)
+    })
+
+    function mobileQuestions(){
+        $('.mobile-answer').toggleClass('active')
+        $('.questions-container-search').toggleClass('active')
+        $('.questions-container-questions__block').toggleClass('active')
+        $('.questions-container-bg').toggleClass('active');
+    }
+
+    $('#mobile-questions-1').on('click', function(){
+        let answerTitle = 'НАШЛИ ЦЕНЫ НИЖЕ?';
+        let answerContent = 'У нас работают профессиональные юристы, специализирующиеся на ликвидации и регистрации предприятий. За более чем 15 лет на рынке мы накопили огромный опыт и решили множество дел разной сложности. Мы строго соблюдаем законы и сроки и гарантируем 100% результат. Низкие же цены зачастую предлагают непрофильные юристы, которые плохо разбираются в вопросе. Не обладая нужными знаниями, они не могут завершить процесс ликвидации, нарушают сроки, а иногда и вовсе пропадают. Чтобы не платить дважды, выбирайте опытных специалистов!';
+        mobileQuestions()
+        $('.mobile-answer-container__title').html(answerTitle);
+        $('.mobile-answer-container__content').html(answerContent)
+    })
+
+    $('#mobile-questions-2').on('click', function(){
+        let answerTitle = 'НУЖЕН ЛИ ДИРЕКТОР И ВСЕ УЧРЕДИТЕЛИ ДЛЯ ЛИКВИДАЦИИ ФИРМЫ?';
+        let answerContent = 'Как правило, для начала процесса ликвидации требуется присутствие директора или одного из учредителей. Все остальные участники могут только подписать протокол.';
+        mobileQuestions()
+        $('.mobile-answer-container__title').html(answerTitle);
+        $('.mobile-answer-container__content').html(answerContent)
+    })
+
+    $('#mobile-questions-4').on('click', function(){
+        let answerTitle = 'ЧТО БУДEТ С МОЕЙ ФИРМОЙ ПОСЛЕ ЛИКВИДАЦИИ?';
+        let answerContent = 'Фирма прекратит деятельность, исключится из государственного реестра. Следовательно по этой компании уже не будет запросов госорганов, она не должна сдавать отчетность.';
+        mobileQuestions()
+        $('.mobile-answer-container__title').html(answerTitle);
+        $('.mobile-answer-container__content').html(answerContent)
+    })
+
+    $('#mobile-questions-3').on('click', function(){
+        let answerTitle = 'КАКИЕ ДОКУМЕНТЫ НУЖНЫ ДЛЯ ЛИКВИДАЦИИ?';
+        let answerContent = 'Обычно требуются:<br> - устав,<br> - свидетельство о регистрации,<br> - свидетельство о постановке на учет,<br> - копия паспорта руководителя.<br> В оригиналах документы понадобятся для нотариуса при заверке.';
+        mobileQuestions()
+        $('.mobile-answer-container__title').html(answerTitle);
+        $('.mobile-answer-container__content').html(answerContent)
+    })
+
+    $('#mobile-questions-5').on('click', function(){
+        let answerTitle = 'КОГДА НУЖНО ЗАКРЫТЬ РАСЧEТНЫЙ СЧЕТ?';
+        let answerContent = 'Счет можно закрыть в любой момент до окончания ликвидации.';
+        mobileQuestions()
+        $('.mobile-answer-container__title').html(answerTitle);
+        $('.mobile-answer-container__content').html(answerContent)
+    })
+
+    $('#mobile-questions-7').on('click', function(){
+        let answerTitle = 'ЗАНИМАЕТЕСЬ ЛИ ВЫ ФИРМАМИ В ДРУГИХ РЕГИОНАХ?';
+        let answerContent = 'Порядок регистрации един по России, и у нас есть обширная партнерская сеть, через которую мы можем надежно подавать и получать документы. Обязанность подготовки и заверки документов остается на нас.';
+        mobileQuestions()
+        $('.mobile-answer-container__title').html(answerTitle);
+        $('.mobile-answer-container__content').html(answerContent)
+    })
+
+    $('#mobile-questions-8').on('click', function(){
+        let answerTitle = 'С ЧЕГО НАЧАТЬ ПРОЦЕДУРУ ЛИКВИДАЦИИ?';
+        let answerContent = 'С консультации, по телефону или лично. В этом случае специалист подробно проконсультирует вас о предпочтительном способе и сроках ликвидации.';
+        mobileQuestions()
+        $('.mobile-answer-container__title').html(answerTitle);
+        $('.mobile-answer-container__content').html(answerContent)
+    })
+
+    $('#mobile-questions-6').on('click', function(){
+        let answerTitle = 'МОГУТ ЛИ УЧРЕДИТЕЛИ ОТВЕЧАТЬ ПО ДОЛГАМ ФИРМЫ В СЛУЧАЕ ЕЕ ЛИКВИДАЦИИ?';
+        let answerContent = 'Учредители отвечают только в пределах своих вкладов в уставный капитал, кроме случаев субсидиарной ответственности при банкротстве.';
+        mobileQuestions()
+        $('.mobile-answer-container__title').html(answerTitle);
+        $('.mobile-answer-container__content').html(answerContent)
+    })
+
+    $('#mobile-questions-9').on('click', function(){
+        let answerTitle = 'ОДИН ИЗ СОУЧРЕДИТЕЛЕЙ НЕ ХОЧЕТ ЛИКВИДИРОВАТЬ ФИРМУ, А ОСТАЛЬНЫЕ ХОТЯТ. ЧТО ДЕЛАТЬ В ЭТОМ СЛУЧАЕ?';
+        let answerContent = 'Для ликвидации необходимо 100% голосов всех учредителей, иначе ее могут отменить в судебном порядке. Если один не согласен, то можно оставшимся выйти из этого общества или продать свои акции.';
+        mobileQuestions()
+        $('.mobile-answer-container__title').html(answerTitle);
+        $('.mobile-answer-container__content').html(answerContent)
+    })
+
+    $('#mobile-answer-close').on('click', function(){
+        $('.mobile-answer').toggleClass('active')
+        $('.questions-container-search').toggleClass('active')
+        $('.questions-container-questions__block').toggleClass('active')
+        $('.questions-container-bg').toggleClass('active');
     })
 
 
@@ -452,4 +546,14 @@ $(document).ready(function () {
     });
 
 
+    $("#questionsSearch").on("keyup", function() {  //2
+        var value = $(this).val().toLowerCase();  //3
+        $("#questionsMenu li").filter(function() {  //4
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)  //5
+        });
+    });
+
+
 })
+
+
