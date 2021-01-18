@@ -1,23 +1,23 @@
 $('#up').fadeOut(700)
-$(document).ready(function(){
-    var Menu  = false
+$(document).ready(function () {
+    var Menu = false
 
-    $('#bell').on('click', function(){
+    $('#bell').on('click', function () {
         $('.bell').toggleClass('active')
         $('.bell-bg').toggleClass('active')
     })
 
-    $('#close-bell').on('click', function(){
+    $('#close-bell').on('click', function () {
         $('.bell').toggleClass('active')
         $('.bell-bg').toggleClass('active')
     })
 
-    $('.prices-content-block-prices__form').on('click', function(){
+    $('.prices-content-block-prices__form').on('click', function () {
         $('.bell').toggleClass('active')
         $('.bell-bg').toggleClass('active')
     })
 
-    function menu(){
+    function menu() {
         $('.menu').toggleClass('active')
         $('.prev').toggleClass('active')
         $('.prices').toggleClass('active')
@@ -31,7 +31,7 @@ $(document).ready(function(){
         $('.m-footer').toggleClass('active')
     }
 
-    function questions(){
+    function questions() {
         $('.container-link').toggleClass('active')
         $('header').addClass('active')
         $('.prev').toggleClass('active')
@@ -47,7 +47,7 @@ $(document).ready(function(){
         $('.m-footer').toggleClass('active')
     }
 
-    function send(){
+    function send() {
         $('.prev').toggleClass('active')
         $('.prices').toggleClass('active')
         $('.progress').toggleClass('active')
@@ -60,7 +60,7 @@ $(document).ready(function(){
         $('.m-footer').toggleClass('active')
     }
 
-    $('#menu').on('click', function(){
+    $('#menu').on('click', function () {
         console.log('fjaof')
         Menu = true
         menu()
@@ -68,58 +68,58 @@ $(document).ready(function(){
         $('.menu-close').toggleClass('active')
     })
 
-    $('#close').on('click', function(){
+    $('#close').on('click', function () {
         Menu = false
         menu()
         $('.menu-open').toggleClass('active')
         $('.menu-close').toggleClass('active')
     })
-    
-    $('.send__item').on('click', function(){
-        if(Menu == false){
+
+    $('.send__item').on('click', function () {
+        if (Menu == false) {
             send()
             $('.menu-open').toggleClass('active')
             $('.bell-close').toggleClass('active')
-            $('.mobile-bell').toggleClass('active') 
+            $('.mobile-bell').toggleClass('active')
             $('.container-link').toggleClass('active')
         }
-        if(Menu == true){
+        if (Menu == true) {
             $('.menu').toggleClass('active')
             $('.menu-close').toggleClass('active')
             $('.bell-close').toggleClass('active')
-            $('.mobile-bell').toggleClass('active') 
+            $('.mobile-bell').toggleClass('active')
             $('.container-link').toggleClass('active')
             Menu = false
         }
     })
 
-    $('.prices-main-block').on('click', function(){
-        if(Menu == false){
+    $('.prices-main-block').on('click', function () {
+        if (Menu == false) {
             send()
             $('.menu-open').toggleClass('active')
             $('.bell-close').toggleClass('active')
-            $('.mobile-bell').toggleClass('active') 
+            $('.mobile-bell').toggleClass('active')
             $('.container-link').toggleClass('active')
         }
-        if(Menu == true){
+        if (Menu == true) {
             $('.menu').toggleClass('active')
             $('.menu-close').toggleClass('active')
             $('.bell-close').toggleClass('active')
-            $('.mobile-bell').toggleClass('active') 
+            $('.mobile-bell').toggleClass('active')
             $('.container-link').toggleClass('active')
             Menu = false
         }
     })
 
-    $('#close-bell-mob').on('click', function(){
+    $('#close-bell-mob').on('click', function () {
         send()
         $('.menu-open').toggleClass('active')
         $('.bell-close').toggleClass('active')
-        $('.mobile-bell').toggleClass('active') 
+        $('.mobile-bell').toggleClass('active')
         $('.container-link').toggleClass('active')
     })
 
-    $('#dispatch').on('click', function(){
+    $('#dispatch').on('click', function () {
         $('.call-back').addClass('active')
         $('.mobile-bell').toggleClass('active')
         $('.bell-close').removeClass('active')
@@ -131,7 +131,7 @@ $(document).ready(function(){
                 $('.container-link').toggleClass('active')
             },
             3000
-          );
+        );
     })
 
     $('.container-link__item').on('click', function (event) {
@@ -141,78 +141,88 @@ $(document).ready(function(){
         $(this).toggleClass("active");
     })
 
-    $('.questions-container__button').on('click', function(){
+    $('.questions-container__button').on('click', function () {
         questions()
         $('.questions-container-main').addClass('active')
     })
 
-    $('.close-search').on('click', function(){
+    $('.close-search').on('click', function () {
         questions()
         $('header').removeClass('active')
         $('.questions-container-main').removeClass('active')
     })
 
-    $(window).scroll(function(){
-		if($(window).scrollTop()>120){
-			$('#up').fadeIn(900)
-		}else{
-			$('#up').fadeOut(700)  
-		}
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 120) {
+            $('#up').fadeIn(900)
+        } else {
+            $('#up').fadeOut(700)
+        }
     });
 
 
-    $("#submit_bell").submit(function() {
+    $(".bell").submit(function () {
         var form_data = $(this).serialize();
         $.ajax({
             type: "POST",
-            url: "send.php",
+            url: "https://xn----8sbpj1akeecdle1m.xn--p1ai/send",
+            crossDomain: true,
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "*",
+                "Access-Control-Allow-Methods": "POST,GET,PUT,DELETE,OPTIONS"
+            },
             data: form_data,
-            success: function() {
+            success: function () {
                 // $(".successfully-wrapper").addClass("active");
                 $(".bell").removeClass("active");
-                setTimeout (function() {
-                // $(".successfully-wrapper").removeClass("active");
-                // $('body').css('overflow-y', 'auto');
+                setTimeout(function () {
+                    // $(".successfully-wrapper").removeClass("active");
+                    // $('body').css('overflow-y', 'auto');
                 }, 2000);
             }
         });
         event.preventDefault();
-        });
+    });
 
-        $("#dispatch").submit(function() {
-            var form_data = $(this).serialize();
-            $.ajax({
-                type: "POST",
-                url: "send.php",
-                data: form_data,
-                success: function() {
-                    // $(".successfully-wrapper").addClass("active");
-                    $(".bell").removeClass("active");
-                    setTimeout (function() {
+    $(".mobile-bell-container").submit(function () {
+        var form_data = $(this).serialize();
+        $.ajax({
+            type: "POST",
+            url: "https://xn----8sbpj1akeecdle1m.xn--p1ai/send",
+            crossDomain: true,
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "*",
+                "Access-Control-Allow-Methods": "POST,GET,PUT,DELETE,OPTIONS"
+            },
+            data: form_data,
+            success: function () {
+                // $(".successfully-wrapper").addClass("active");
+                $(".bell").removeClass("active");
+                setTimeout(function () {
                     // $(".successfully-wrapper").removeClass("active");
                     // $('body').css('overflow-y', 'auto');
-                    }, 2000);
-                }
-            });
-            event.preventDefault();
-            });   
-                                                        
+                }, 2000);
+            }
+        });
+        event.preventDefault();
+    });
+
 
     $('.prices-content').slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
         adaptiveHeight: true,
-        responsive: [
-            {
-              breakpoint: 1290,
-              settings: {
+        responsive: [{
+            breakpoint: 1290,
+            settings: {
                 centerMode: true,
                 slidesToShow: 2,
                 slidesToScroll: 2,
-              }
-            },
-          ]
+            }
+        }, ]
     });
 
 
@@ -221,32 +231,31 @@ $(document).ready(function(){
         slidesToShow: 3,
         slidesToScroll: 3,
         adaptiveHeight: true,
-        responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-              }
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
             },
             {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
             },
             {
-              breakpoint: 480,
-              settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-          ]
+        ]
     });
 
     $('.gratitude-container').slick({
@@ -254,32 +263,31 @@ $(document).ready(function(){
         slidesToShow: 3,
         slidesToScroll: 3,
         adaptiveHeight: true,
-        responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-              }
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
             },
             {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
             },
             {
-              breakpoint: 480,
-              settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-          ]
+        ]
     });
 
     $('.answer-close').on('click', function (event) {
@@ -361,63 +369,85 @@ $(document).ready(function(){
     })
 
 
-    $('#click').on('click', function(e){
-        $('html,body').stop().animate({ scrollTop: $('header').offset().top }, 1000);
+    $('#click').on('click', function (e) {
+        $('html,body').stop().animate({
+            scrollTop: $('header').offset().top
+        }, 1000);
         e.preventDefault();
     });
-    $('#prices').on('click', function(e){
-        $('html,body').stop().animate({ scrollTop: $('.prices').offset().top }, 1000);
+    $('#prices').on('click', function (e) {
+        $('html,body').stop().animate({
+            scrollTop: $('.prices').offset().top
+        }, 1000);
         e.preventDefault();
     });
-    $('#elimination').on('click', function(e){
-        $('html,body').stop().animate({ scrollTop: $('.elimination').offset().top }, 1000);
+    $('#elimination').on('click', function (e) {
+        $('html,body').stop().animate({
+            scrollTop: $('.elimination').offset().top
+        }, 1000);
         e.preventDefault();
     });
-    $('#questions').on('click', function(e){
-        $('html,body').stop().animate({ scrollTop: $('.questions').offset().top }, 1000);
+    $('#questions').on('click', function (e) {
+        $('html,body').stop().animate({
+            scrollTop: $('.questions').offset().top
+        }, 1000);
         e.preventDefault();
     });
-    $('#result').on('click', function(e){
-        $('html,body').stop().animate({ scrollTop: $('.result').offset().top }, 1000);
+    $('#result').on('click', function (e) {
+        $('html,body').stop().animate({
+            scrollTop: $('.result').offset().top
+        }, 1000);
         e.preventDefault();
     });
-    $('#contact').on('click', function(e){
-        $('html,body').stop().animate({ scrollTop: $('.footer').offset().top }, 1000);
+    $('#contact').on('click', function (e) {
+        $('html,body').stop().animate({
+            scrollTop: $('.footer').offset().top
+        }, 1000);
         e.preventDefault();
     });
-    $('#mobile-prices').on('click', function(e){
+    $('#mobile-prices').on('click', function (e) {
         menu()
         $('.menu-open').toggleClass('active')
         $('.menu-close').toggleClass('active')
-        $('html,body').stop().animate({ scrollTop: $('#prices-link').offset().top }, 1000);
+        $('html,body').stop().animate({
+            scrollTop: $('#prices-link').offset().top
+        }, 1000);
         e.preventDefault();
     });
-    $('#mobile-elimination').on('click', function(e){
+    $('#mobile-elimination').on('click', function (e) {
         menu()
         $('.menu-open').toggleClass('active')
         $('.menu-close').toggleClass('active')
-        $('html,body').stop().animate({ scrollTop: $('#elimination-link').offset().top }, 1000);
+        $('html,body').stop().animate({
+            scrollTop: $('#elimination-link').offset().top
+        }, 1000);
         e.preventDefault();
     });
-    $('#mobile-questions').on('click', function(e){
+    $('#mobile-questions').on('click', function (e) {
         menu()
         $('.menu-open').toggleClass('active')
         $('.menu-close').toggleClass('active')
-        $('html,body').stop().animate({ scrollTop: $('#questions-link').offset().top }, 1000);
+        $('html,body').stop().animate({
+            scrollTop: $('#questions-link').offset().top
+        }, 1000);
         e.preventDefault();
     });
-    $('#mobile-result').on('click', function(e){
+    $('#mobile-result').on('click', function (e) {
         menu()
         $('.menu-open').toggleClass('active')
         $('.menu-close').toggleClass('active')
-        $('html,body').stop().animate({ scrollTop: $('#result-link').offset().top }, 1000);
+        $('html,body').stop().animate({
+            scrollTop: $('#result-link').offset().top
+        }, 1000);
         e.preventDefault();
     });
-    $('#mobile-footer').on('click', function(e){
+    $('#mobile-footer').on('click', function (e) {
         menu()
         $('.menu-open').toggleClass('active')
         $('.menu-close').toggleClass('active')
-        $('html,body').stop().animate({ scrollTop: $('#footer-link').offset().top }, 1000);
+        $('html,body').stop().animate({
+            scrollTop: $('#footer-link').offset().top
+        }, 1000);
         e.preventDefault();
     });
 
