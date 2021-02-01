@@ -35,6 +35,7 @@ $(document).ready(function () {
         $('.menu').toggleClass('active')
         $('.prev').toggleClass('active')
         $('.prices').toggleClass('active')
+        $('.m-garant').toggleClass('active')
         $('.progress').toggleClass('active')
         $('.benefits').toggleClass('active')
         $('.elimination').toggleClass('active')
