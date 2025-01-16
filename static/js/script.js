@@ -26,10 +26,10 @@ $(document).ready(function () {
         $('.bell-bg').toggleClass('active')
     })
 
-    $('.prices-content-block-prices__form').on('click', function () {
-        $('.bell').toggleClass('active')
-        $('.bell-bg').toggleClass('active')
-    })
+    // $('.prices-content-block-prices__form').on('click', function () {
+    //     $('.bell').toggleClass('active')
+    //     $('.bell-bg').toggleClass('active')
+    // })
 
     function menu() {
         $('.menu').toggleClass('active')

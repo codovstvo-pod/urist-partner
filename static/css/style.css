@@ -41,11 +41,7 @@ a {
     -ms-grid-rows: 68px 12px 68px 12px 68px;
     grid-template-rows: 68px 68px 68px;
     gap: 12px;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 
@@ -263,11 +259,7 @@ a {
     border: none;
     outline: none;
     cursor: pointer;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .bell-container {
@@ -297,11 +289,7 @@ a {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .bell-container-form {
@@ -345,11 +333,7 @@ a {
     line-height: 21px;
     text-align: center;
     color: #FFFFFF;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
     cursor: pointer;
 }
 
@@ -371,7 +355,8 @@ a {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    background: url(../img/fon.png);
+    /* background: url(../img/fon.png); */
+    background-color: #111111;
     background-position: center center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -395,14 +380,6 @@ header {
     justify-content: space-between;
     margin: 0 auto;
     padding-top: 42px;
-}
-
-.header__logo {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
 }
 
 .header-menu {
@@ -452,11 +429,7 @@ header {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .header-menu-wrapper__item {
@@ -543,11 +516,7 @@ header {
     font-weight: 600;
     font-size: 17px;
     line-height: 21px;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 /* --- Вид главного контента на превью --- */
@@ -555,11 +524,7 @@ header {
 .prev-main {
     width: 65%;
     margin: 0 auto;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+    /*  */
 }
 
 .prev-main__tittle {
@@ -574,7 +539,7 @@ header {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 30px;
     line-height: 27px;
 }
 
@@ -592,11 +557,7 @@ header {
     flex-direction: row;
     gap: 0px 80px;
     padding-bottom: 6%;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .prev-servise-block {
@@ -647,11 +608,7 @@ header {
     font-weight: bold;
     font-size: 45px;
     line-height: 55px;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .prices-content {
@@ -723,11 +680,7 @@ header {
     -ms-flex-direction: row;
     flex-direction: row;
     gap: 9px;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .prices-content-block-prices-information__time {
@@ -783,6 +736,13 @@ header {
     width: 259px;
     height: 43px;
     margin-top: 9px;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     background: #FFBF1B;
     border-radius: 26px;
     outline: none;
@@ -979,11 +939,7 @@ header {
 
 .progress {
     width: 100%;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .progress__title {
@@ -1084,11 +1040,7 @@ header {
 
 .benefits {
     width: 100%;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .benefits__title {
@@ -1197,11 +1149,7 @@ header {
     margin: 0 auto;
     margin-top: 142px;
     text-align: center;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .elimination-title__a {
@@ -1278,11 +1226,7 @@ header {
     font-size: 35px;
     line-height: 43px;
     color: #000000;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .elimination-container-block__number.active {
@@ -1309,11 +1253,7 @@ header {
     line-height: 18px;
     text-align: center;
     color: #000000;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .elimination-container-block__content.active {
@@ -1343,11 +1283,7 @@ header {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .questions-title__a {
@@ -1420,20 +1356,12 @@ header {
     line-height: 22px;
     text-transform: uppercase;
     color: #181818;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .questions-container-block__img {
     cursor: pointer;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 /* Вид окна "С НАМИ РАБОТАЮТ" */
@@ -1441,11 +1369,7 @@ header {
 .cooperation {
     width: 100%;
     margin-top: 130px;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .cooperation-title {
@@ -1505,11 +1429,7 @@ header {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .gratitude-title__title {
@@ -1598,11 +1518,7 @@ header {
     line-height: 55px;
     text-align: center;
     color: #FFFFFF;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .result-container {
@@ -1673,11 +1589,7 @@ header {
     font-size: 12px;
     line-height: 15px;
     color: #FFFFFF;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .result-container-block-content__download {
@@ -1695,11 +1607,7 @@ header {
     background: #181818;
     border-radius: 50%;
     cursor: pointer;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 /*  */
@@ -1809,19 +1717,7 @@ header {
 
 .footer-container__logo {
     cursor: pointer;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
 
-.footer-container-content-block__icon {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
 }
 
 .answer {
@@ -1854,11 +1750,7 @@ header {
     border: 0;
     outline: none;
     cursor: pointer;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .answer-container {
@@ -1883,11 +1775,7 @@ header {
     line-height: 44px;
     text-transform: uppercase;
     color: #181818;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+
 }
 
 .answer-container-content {
@@ -3033,7 +2921,8 @@ header {
         -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
-        background: url(../img/fon_mob.png);
+        /* background: url(../img/fon_mob.png); */
+        background-color: #111111;
         background-position: center center;
         background-size: 100% 100%;
         background-repeat: no-repeat;
@@ -3058,7 +2947,7 @@ header {
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;
-        font-size: 14.7139px;
+        font-size: 17;
         line-height: 18px;
         color: #FFFFFF;
     }
@@ -4026,7 +3915,7 @@ header {
 
     .m-result {
         width: 100%;
-        height: 100vh;
+        height: 70vh;
         margin-top: 68px;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -4038,7 +3927,8 @@ header {
         -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
-        background: url(../img/result.mob.png);
+        /* background: url(../img/result.mob.png); */
+        background-color: #111111;
         background-position: center center;
         background-size: 100% 100%;
         background-repeat: no-repeat;
@@ -4591,7 +4481,8 @@ header {
         -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
-        background: url(../img/fon_mob.png);
+        /* background: url(../img/fon_mob.png); */
+        background-color: #111111;
         background-position: center center;
         background-size: 100% 100%;
         background-repeat: no-repeat;
@@ -4616,7 +4507,7 @@ header {
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;
-        font-size: 14.7139px;
+        font-size: 17px;
         line-height: 18px;
         color: #FFFFFF;
     }
@@ -5428,7 +5319,7 @@ header {
 
     .m-result {
         width: 100%;
-        height: 100vh;
+        height: 70vh;
         margin-top: 68px;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -5440,7 +5331,8 @@ header {
         -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
-        background: url(../img/result.mob.png);
+        /* background: url(../img/result.mob.png); */
+        background-color: #111111;
         background-position: center center;
         background-size: 100% 100%;
         background-repeat: no-repeat;
