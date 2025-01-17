@@ -121,8 +121,8 @@ $(document).ready(function () {
         mobilePrice()
         let prices__title = 'АЛЬТЕРНАТИВНАЯ ЛИКВИДАЦИЯ'
         let prices__contant = 'Поиск покупателей для вашей организации с последующим внесением изменений. Нотаринальный договор купли-продажи, вступает, как определенная гарантия от отмены изменений, наличи полного волеизъявления покупателя, документарной проверки дееспособности сторон.'
-        let prices__time = 'oт 5 дней'
-        let prices__cost = 'oт 30 000₽'
+        let prices__time = '30 дней'
+        let prices__cost = '15 000₽'
         $('.prices-main-description-container__title').html(prices__title)
         $('.prices-main-description-container__contant').html( prices__contant)
         $('.prices-main-description-container__time').html(prices__time)
@@ -131,10 +131,10 @@ $(document).ready(function () {
 
     $('#prices-main-block-2').on('click', function () {
         mobilePrice()
-        let prices__title = 'ДОБРОВОЛЬНАЯ ЛИКВИДАЦИЯ'
+        let prices__title = 'ЛИКВИДАЦИЯ'
         let prices__contant = 'По окончании ликвидации снимаются все обязательства и притязания. Компания официально прекращает свою деятельность с внесением в ЕГРЮЛ. Идеально подходит для компаний с нулевыми оборотами. Возможно прохождение налоговой проверки, подходит только при отсутствии долгов'
         let prices__time = 'от 3 месяцев'
-        let prices__cost = 'от 25000₽'
+        let prices__cost = '15 000₽'
         $('.prices-main-description-container__title').html(prices__title)
         $('.prices-main-description-container__contant').html( prices__contant)
         $('.prices-main-description-container__time').html(prices__time)
@@ -143,10 +143,10 @@ $(document).ready(function () {
 
     $('#prices-main-block-3').on('click', function () {
         mobilePrice()
-        let prices__title = 'ДОБРОВОЛЬНАЯ ЛИКВИДАЦИЯ С ГАРАНТИЕЙ ОТСУТСВИЯ ВПН'
+        let prices__title = 'ЛИКВИДАЦИЯ С ГАРАНТИЕЙ ОТСУТСВИЯ ВНП'
         let prices__contant = 'Данная ликвидация рекомендована компаниями, где есть риск налоговой проверки с доначислением (большие обороты в год, были возвраты из бюджета, были гос. контракты на крупные суммы или иные основания). Точную стоимость можем определить после получения от вас ИНН компании. Проведем анализ с указанием конкретных рисковых контрагентов, на наличие разрывов по налогам и др.'
         let prices__time = 'от 4-5 месяцев'
-        let prices__cost = 'от 140 000₽'
+        let prices__cost = 'от 90 000₽'
         $('.prices-main-description-container__title').html(prices__title)
         $('.prices-main-description-container__contant').html( prices__contant)
         $('.prices-main-description-container__time').html(prices__time)
