@@ -5,12 +5,12 @@ $(document).ready(function () {
 
     var Menu = false
 
-    $('.cite').on('click', function(){
+    $('.cite').on('click', function () {
         $('.choice-cite').toggleClass('active')
         $('.bell-bg').toggleClass('active')
     })
 
-    $('.choice-cite').on('click', function(){
+    $('.choice-cite').on('click', function () {
         $('.choice-cite').toggleClass('active')
         $('.bell-bg').toggleClass('active')
     })
@@ -108,7 +108,7 @@ $(document).ready(function () {
         }
     })
 
-    function mobilePrice(){
+    function mobilePrice() {
         $('.prices-main-description').toggleClass('active')
         $('.prices-bg').toggleClass('active')
     }
@@ -119,24 +119,24 @@ $(document).ready(function () {
 
     $('#prices-main-block-1').on('click', function () {
         mobilePrice()
-        let prices__title = 'АЛЬТЕРНАТИВНАЯ ЛИКВИДАЦИЯ'
+        let prices__title = 'АЛЬТЕРНАТИВНАЯ ЛИКВИДАЦИЯ ООО, АО'
         let prices__contant = 'Поиск покупателей для вашей организации с последующим внесением изменений. Нотаринальный договор купли-продажи, вступает, как определенная гарантия от отмены изменений, наличи полного волеизъявления покупателя, документарной проверки дееспособности сторон.'
         let prices__time = '30 дней'
-        let prices__cost = '15 000₽'
+        let prices__cost = '25 000₽'
         $('.prices-main-description-container__title').html(prices__title)
-        $('.prices-main-description-container__contant').html( prices__contant)
+        $('.prices-main-description-container__contant').html(prices__contant)
         $('.prices-main-description-container__time').html(prices__time)
         $('.prices-main-description-container__cost').html(prices__cost)
     })
 
     $('#prices-main-block-2').on('click', function () {
         mobilePrice()
-        let prices__title = 'ЛИКВИДАЦИЯ'
+        let prices__title = 'ОФИЦИАЛЬНАЯ ЛИКВИДАЦИЯ ООО, АО'
         let prices__contant = 'По окончании ликвидации снимаются все обязательства и притязания. Компания официально прекращает свою деятельность с внесением в ЕГРЮЛ. Идеально подходит для компаний с нулевыми оборотами. Возможно прохождение налоговой проверки, подходит только при отсутствии долгов'
         let prices__time = 'от 3 месяцев'
-        let prices__cost = '15 000₽'
+        let prices__cost = '20 000₽'
         $('.prices-main-description-container__title').html(prices__title)
-        $('.prices-main-description-container__contant').html( prices__contant)
+        $('.prices-main-description-container__contant').html(prices__contant)
         $('.prices-main-description-container__time').html(prices__time)
         $('.prices-main-description-container__cost').html(prices__cost)
     })
@@ -148,7 +148,7 @@ $(document).ready(function () {
         let prices__time = 'от 4-5 месяцев'
         let prices__cost = 'от 90 000₽'
         $('.prices-main-description-container__title').html(prices__title)
-        $('.prices-main-description-container__contant').html( prices__contant)
+        $('.prices-main-description-container__contant').html(prices__contant)
         $('.prices-main-description-container__time').html(prices__time)
         $('.prices-main-description-container__cost').html(prices__cost)
     })
@@ -160,7 +160,7 @@ $(document).ready(function () {
         let prices__time = 'от 3 дней'
         let prices__cost = 'от 1500₽'
         $('.prices-main-description-container__title').html(prices__title)
-        $('.prices-main-description-container__contant').html( prices__contant)
+        $('.prices-main-description-container__contant').html(prices__contant)
         $('.prices-main-description-container__time').html(prices__time)
         $('.prices-main-description-container__cost').html(prices__cost)
     })
@@ -172,7 +172,7 @@ $(document).ready(function () {
         let prices__time = 'от 5 дней'
         let prices__cost = 'от 1500₽'
         $('.prices-main-description-container__title').html(prices__title)
-        $('.prices-main-description-container__contant').html( prices__contant)
+        $('.prices-main-description-container__contant').html(prices__contant)
         $('.prices-main-description-container__time').html(prices__time)
         $('.prices-main-description-container__cost').html(prices__cost)
     })
@@ -184,7 +184,7 @@ $(document).ready(function () {
         let prices__time = 'от 6 месяцев'
         let prices__cost = 'от 120 000₽'
         $('.prices-main-description-container__title').html(prices__title)
-        $('.prices-main-description-container__contant').html( prices__contant)
+        $('.prices-main-description-container__contant').html(prices__contant)
         $('.prices-main-description-container__time').html(prices__time)
         $('.prices-main-description-container__cost').html(prices__cost)
     })
@@ -196,7 +196,7 @@ $(document).ready(function () {
         let prices__time = 'от 1 дня'
         let prices__cost = 'от 50 000₽'
         $('.prices-main-description-container__title').html(prices__title)
-        $('.prices-main-description-container__contant').html( prices__contant)
+        $('.prices-main-description-container__contant').html(prices__contant)
         $('.prices-main-description-container__time').html(prices__time)
         $('.prices-main-description-container__cost').html(prices__cost)
     })
@@ -208,7 +208,7 @@ $(document).ready(function () {
         let prices__time = 'от 1 дня'
         let prices__cost = 'от 50 000₽'
         $('.prices-main-description-container__title').html(prices__title)
-        $('.prices-main-description-container__contant').html( prices__contant)
+        $('.prices-main-description-container__contant').html(prices__contant)
         $('.prices-main-description-container__time').html(prices__time)
         $('.prices-main-description-container__cost').html(prices__cost)
     })
@@ -220,7 +220,19 @@ $(document).ready(function () {
         let prices__time = 'По согласованию'
         let prices__cost = 'По согласованию'
         $('.prices-main-description-container__title').html(prices__title)
-        $('.prices-main-description-container__contant').html( prices__contant)
+        $('.prices-main-description-container__contant').html(prices__contant)
+        $('.prices-main-description-container__time').html(prices__time)
+        $('.prices-main-description-container__cost').html(prices__cost)
+    })
+
+    $('#prices-main-block-10').on('click', function () {
+        mobilePrice()
+        let prices__title = 'ЛИКВИДАЦИЯ ЧЕРЕЗ НЕДОСТОВЕРНОСТЬ'
+        let prices__contant = 'Ликвидация путем внесения недостоверности сведений о вас как о руководителе и участнике в ЕГРЮЛ'
+        let prices__time = 'от 7 дней'
+        let prices__cost = '15 000₽'
+        $('.prices-main-description-container__title').html(prices__title)
+        $('.prices-main-description-container__contant').html(prices__contant)
         $('.prices-main-description-container__time').html(prices__time)
         $('.prices-main-description-container__cost').html(prices__cost)
     })
@@ -274,54 +286,54 @@ $(document).ready(function () {
         }
     });
 
-    
+
     $(".bell").submit(function () {
         var form_data = $(this).serialize();
         $.ajax({
-        type: "POST",
-        url: `https://xn----8sbpj1akeecdle1m.xn--p1ai/send?${form_data}`,
-        crossDomain: true,
-        headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "*",
-        "Access-Control-Allow-Methods": "POST,GET,PUT,DELETE,OPTIONS"
-        },
-        success: function () {
-        // $(".successfully-wrapper").addClass("active");
-        $(".bell").removeClass("active");
-        $('.bell-bg').removeClass('active')
-        setTimeout(function () {
-        // $(".successfully-wrapper").removeClass("active");
-        // $('body').css('overflow-y', 'auto');
-        }, 2000);
-        }
+            type: "POST",
+            url: `https://xn----8sbpj1akeecdle1m.xn--p1ai/send?${form_data}`,
+            crossDomain: true,
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "*",
+                "Access-Control-Allow-Methods": "POST,GET,PUT,DELETE,OPTIONS"
+            },
+            success: function () {
+                // $(".successfully-wrapper").addClass("active");
+                $(".bell").removeClass("active");
+                $('.bell-bg').removeClass('active')
+                setTimeout(function () {
+                    // $(".successfully-wrapper").removeClass("active");
+                    // $('body').css('overflow-y', 'auto');
+                }, 2000);
+            }
         });
         event.preventDefault();
-        });
-        
-        $(".mobile-bell-container").submit(function () {
+    });
+
+    $(".mobile-bell-container").submit(function () {
         var form_data = $(this).serialize();
         $.ajax({
-        type: "POST",
-        url: `https://xn----8sbpj1akeecdle1m.xn--p1ai/send?${form_data}`,
-        crossDomain: true,
-        headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "*",
-        "Access-Control-Allow-Methods": "POST,GET,PUT,DELETE,OPTIONS"
-        },
-        success: function () {
-        // $(".successfully-wrapper").addClass("active");
-        $(".bell").removeClass("active");
-        setTimeout(function () {
-        // $(".successfully-wrapper").removeClass("active");
-        // $('body').css('overflow-y', 'auto');
-        }, 2000);
-        }
+            type: "POST",
+            url: `https://xn----8sbpj1akeecdle1m.xn--p1ai/send?${form_data}`,
+            crossDomain: true,
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "*",
+                "Access-Control-Allow-Methods": "POST,GET,PUT,DELETE,OPTIONS"
+            },
+            success: function () {
+                // $(".successfully-wrapper").addClass("active");
+                $(".bell").removeClass("active");
+                setTimeout(function () {
+                    // $(".successfully-wrapper").removeClass("active");
+                    // $('body').css('overflow-y', 'auto');
+                }, 2000);
+            }
         });
         event.preventDefault();
-        });
-        
+    });
+
 
 
     $('.prices-content').slick({
@@ -335,7 +347,7 @@ $(document).ready(function () {
                 // centerMode: true,
                 slidesToShow: 2,
                 slidesToScroll: 2,
-            }   
+            }
         },
         {
             breakpoint: 1190,
@@ -355,29 +367,29 @@ $(document).ready(function () {
         slidesToScroll: 3,
         adaptiveHeight: true,
         responsive: [{
-                breakpoint: 1290,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+            breakpoint: 1290,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
             }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
         ]
     });
 
@@ -387,29 +399,29 @@ $(document).ready(function () {
         slidesToScroll: 3,
         adaptiveHeight: true,
         responsive: [{
-                breakpoint: 1290,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+            breakpoint: 1290,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
             }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
         ]
     });
 
@@ -491,14 +503,14 @@ $(document).ready(function () {
         $('.answer-container-content').html(answerContent)
     })
 
-    function mobileQuestions(){
+    function mobileQuestions() {
         $('.mobile-answer').toggleClass('active')
         $('.questions-container-search').toggleClass('active')
         $('.questions-container-questions__block').toggleClass('active')
         $('.questions-container-bg').toggleClass('active');
     }
 
-    $('#mobile-questions-1').on('click', function(){
+    $('#mobile-questions-1').on('click', function () {
         let answerTitle = 'НАШЛИ ЦЕНЫ НИЖЕ?';
         let answerContent = 'У нас работают профессиональные юристы, специализирующиеся на ликвидации и регистрации предприятий. За более чем 15 лет на рынке мы накопили огромный опыт и решили множество дел разной сложности. Мы строго соблюдаем законы и сроки и гарантируем 100% результат. Низкие же цены зачастую предлагают непрофильные юристы, которые плохо разбираются в вопросе. Не обладая нужными знаниями, они не могут завершить процесс ликвидации, нарушают сроки, а иногда и вовсе пропадают. Чтобы не платить дважды, выбирайте опытных специалистов!';
         mobileQuestions()
@@ -506,7 +518,7 @@ $(document).ready(function () {
         $('.mobile-answer-container__content').html(answerContent)
     })
 
-    $('#mobile-questions-2').on('click', function(){
+    $('#mobile-questions-2').on('click', function () {
         let answerTitle = 'НУЖЕН ЛИ ДИРЕКТОР И ВСЕ УЧРЕДИТЕЛИ ДЛЯ ЛИКВИДАЦИИ ФИРМЫ?';
         let answerContent = 'Как правило, для начала процесса ликвидации требуется присутствие директора или одного из учредителей. Все остальные участники могут только подписать протокол.';
         mobileQuestions()
@@ -514,7 +526,7 @@ $(document).ready(function () {
         $('.mobile-answer-container__content').html(answerContent)
     })
 
-    $('#mobile-questions-4').on('click', function(){
+    $('#mobile-questions-4').on('click', function () {
         let answerTitle = 'ЧТО БУДEТ С МОЕЙ ФИРМОЙ ПОСЛЕ ЛИКВИДАЦИИ?';
         let answerContent = 'Фирма прекратит деятельность, исключится из государственного реестра. Следовательно по этой компании уже не будет запросов госорганов, она не должна сдавать отчетность.';
         mobileQuestions()
@@ -522,7 +534,7 @@ $(document).ready(function () {
         $('.mobile-answer-container__content').html(answerContent)
     })
 
-    $('#mobile-questions-3').on('click', function(){
+    $('#mobile-questions-3').on('click', function () {
         let answerTitle = 'КАКИЕ ДОКУМЕНТЫ НУЖНЫ ДЛЯ ЛИКВИДАЦИИ?';
         let answerContent = 'Обычно требуются:<br> - устав,<br> - свидетельство о регистрации,<br> - свидетельство о постановке на учет,<br> - копия паспорта руководителя.<br> В оригиналах документы понадобятся для нотариуса при заверке.';
         mobileQuestions()
@@ -530,7 +542,7 @@ $(document).ready(function () {
         $('.mobile-answer-container__content').html(answerContent)
     })
 
-    $('#mobile-questions-5').on('click', function(){
+    $('#mobile-questions-5').on('click', function () {
         let answerTitle = 'КОГДА НУЖНО ЗАКРЫТЬ РАСЧEТНЫЙ СЧЕТ?';
         let answerContent = 'Счет можно закрыть в любой момент до окончания ликвидации.';
         mobileQuestions()
@@ -538,7 +550,7 @@ $(document).ready(function () {
         $('.mobile-answer-container__content').html(answerContent)
     })
 
-    $('#mobile-questions-7').on('click', function(){
+    $('#mobile-questions-7').on('click', function () {
         let answerTitle = 'ЗАНИМАЕТЕСЬ ЛИ ВЫ ФИРМАМИ В ДРУГИХ РЕГИОНАХ?';
         let answerContent = 'Порядок регистрации един по России, и у нас есть обширная партнерская сеть, через которую мы можем надежно подавать и получать документы. Обязанность подготовки и заверки документов остается на нас.';
         mobileQuestions()
@@ -546,7 +558,7 @@ $(document).ready(function () {
         $('.mobile-answer-container__content').html(answerContent)
     })
 
-    $('#mobile-questions-8').on('click', function(){
+    $('#mobile-questions-8').on('click', function () {
         let answerTitle = 'С ЧЕГО НАЧАТЬ ПРОЦЕДУРУ ЛИКВИДАЦИИ?';
         let answerContent = 'С консультации, по телефону или лично. В этом случае специалист подробно проконсультирует вас о предпочтительном способе и сроках ликвидации.';
         mobileQuestions()
@@ -554,7 +566,7 @@ $(document).ready(function () {
         $('.mobile-answer-container__content').html(answerContent)
     })
 
-    $('#mobile-questions-6').on('click', function(){
+    $('#mobile-questions-6').on('click', function () {
         let answerTitle = 'МОГУТ ЛИ УЧРЕДИТЕЛИ ОТВЕЧАТЬ ПО ДОЛГАМ ФИРМЫ В СЛУЧАЕ ЕЕ ЛИКВИДАЦИИ?';
         let answerContent = 'Учредители отвечают только в пределах своих вкладов в уставный капитал, кроме случаев субсидиарной ответственности при банкротстве.';
         mobileQuestions()
@@ -562,7 +574,7 @@ $(document).ready(function () {
         $('.mobile-answer-container__content').html(answerContent)
     })
 
-    $('#mobile-questions-9').on('click', function(){
+    $('#mobile-questions-9').on('click', function () {
         let answerTitle = 'ОДИН ИЗ СОУЧРЕДИТЕЛЕЙ НЕ ХОЧЕТ ЛИКВИДИРОВАТЬ ФИРМУ, А ОСТАЛЬНЫЕ ХОТЯТ. ЧТО ДЕЛАТЬ В ЭТОМ СЛУЧАЕ?';
         let answerContent = 'Для ликвидации необходимо 100% голосов всех учредителей, иначе ее могут отменить в судебном порядке. Если один не согласен, то можно оставшимся выйти из этого общества или продать свои акции.';
         mobileQuestions()
@@ -570,7 +582,7 @@ $(document).ready(function () {
         $('.mobile-answer-container__content').html(answerContent)
     })
 
-    $('#mobile-answer-close').on('click', function(){
+    $('#mobile-answer-close').on('click', function () {
         $('.mobile-answer').toggleClass('active')
         $('.questions-container-search').toggleClass('active')
         $('.questions-container-questions__block').toggleClass('active')
@@ -660,9 +672,9 @@ $(document).ready(function () {
         e.preventDefault();
     });
 
-    $("#questionsSearch").on("keyup", function() {  //2
+    $("#questionsSearch").on("keyup", function () {  //2
         var value = $(this).val().toLowerCase();  //3
-        $("#questionsMenu li").filter(function() {  //4
+        $("#questionsMenu li").filter(function () {  //4
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)  //5
         });
     });
